@@ -1,0 +1,202 @@
+$widthApp: 300px
+$gapWidth: 5px
+$margin: 15px
+$colorRed: #ff0000
+$colorGreen: #59ff00
+$colorWhite: #fff
+
+*, *::before, *::after
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #f3f3f3
+    font-family: "Montserrat", sans-serif
+
+    
+ 
+.wraper
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    flex-wrap: wrap
+    height: 400px
+    width: 800px
+    background-color: $colorWhite
+    border: solid
+    border-radius: 50px
+.boxes
+    order: 5
+    display: flex
+    flex-wrap: wrap
+    gap: $gapWidth
+    width: $widthApp - $gapWidth
+    height: $widthApp - $gapWidth - 1px
+    background-color: black
+    margin: $margin
+.box
+    flex-basis: 95px
+    width: 95px
+    height: 95px
+    font-size: 75px
+    text-align: center
+    background-color: $colorWhite
+
+.result
+    order: 2
+    position: relative
+    height: 70px
+    max-width: $widthApp
+    text-align: center
+    font-size: 35px
+    color: $colorRed
+    margin: $margin
+    white-space: nowrap
+    overflow: hidden
+    p
+        font-size: 20px
+    
+.info
+    order: 1
+    width: $widthApp
+    display: flex
+    flex-direction: column
+    // margin: $margin
+.players
+    position: relative
+    width: $widthApp
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    font-size: 15px
+    margin: 10px
+    input
+        font-size: 10px
+        text-align: center
+    span
+        font-size: 20px
+        font-weight: bold
+
+.player
+    // width: $widthApp/3
+    display: flex
+    justify-content: space-between
+.playerInfo
+    &::after
+        content: "Maksylanie 8 znaków"
+        position: absolute
+        width: 150px
+        height: 15px
+        top: -15px  
+        font-size: 10px 
+        color: $colorRed
+        text-align: center      
+
+        
+
+.numOfGames
+    justify-content: center
+    & > select
+        margin: 0 10px
+        font-size: 15px
+
+.tableResults
+    order: 4
+    font-size: 15px
+    text-align: center
+
+.buttons
+    order: 3
+    margin: $margin
+.button
+    font-size: 20px
+    background-color: $colorGreen
+    border: 0
+    border-radius: 13px
+    padding: 5px 15px
+    margin: 0 10px
+    &:hover
+        scale: 1.05
+        box-shadow: 5px 5px 3px #00000066
+        transition: box-shadow .3s, scale .3s
+        
+    &__reset
+        background-color: $colorRed
+.alert
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: center
+    background-color: #00000093
+    p
+        align-self: center
+        background-color: #fff
+        padding: 10px 50px
+        color: black
+        font-size: 20px
+        border-radius: 13px
+
+
+.sign
+    position: relative
+    width: 50px
+    height: 25px
+    // margin: 0 5px
+    &::after, &::before
+        content: ""
+        position: absolute
+        width: 50%
+        height: 100%
+        background-color: $colorGreen
+        border: 1px solid
+        // border-right: 0
+    &::before
+        right: 0
+        background-color: $colorWhite
+        border-left: 0
+
+    &:checked
+        &::after
+            background-color: $colorWhite
+        &::before
+            background-color: $colorGreen
+.hide
+    display: none
+
+@media (orientation: portrait), screen and (max-width: 1366px)
+    $widthApp: 100px
+    body
+        height: 100%
+    .wraper
+        justify-content: center
+        // align-items: start
+        flex-direction: column
+        height: 100%
+        flex-wrap: nowrap
+        background-color: $colorWhite
+        border: none
+        border-radius: 50px
+    .info
+        order: 1
+        margin: 10px
+    .result
+        order: 2
+        margin: 10px
+    .boxes
+        order: 3
+    .tableResults
+        order: 4
+    .buttons
+        order: 5
+
+

@@ -1,0 +1,296 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f3f3f3;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wraper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 400px;
+  width: 800px;
+  background-color: #fff;
+  border: solid;
+  border-radius: 50px;
+}
+
+.boxes {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+  width: 295px;
+  height: 294px;
+  background-color: black;
+  margin: 15px;
+}
+
+.box {
+  -ms-flex-preferred-size: 95px;
+      flex-basis: 95px;
+  width: 95px;
+  height: 95px;
+  font-size: 75px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.result {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  position: relative;
+  height: 70px;
+  max-width: 300px;
+  text-align: center;
+  font-size: 35px;
+  color: #ff0000;
+  margin: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.result p {
+  font-size: 20px;
+}
+
+.info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.players {
+  position: relative;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 15px;
+  margin: 10px;
+}
+.players input {
+  font-size: 10px;
+  text-align: center;
+}
+.players span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.playerInfo::after {
+  content: "Maksylanie 8 znaków";
+  position: absolute;
+  width: 150px;
+  height: 15px;
+  top: -15px;
+  font-size: 10px;
+  color: #ff0000;
+  text-align: center;
+}
+
+.numOfGames {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.numOfGames > select {
+  margin: 0 10px;
+  font-size: 15px;
+}
+
+.tableResults {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  font-size: 15px;
+  text-align: center;
+}
+
+.buttons {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  margin: 15px;
+}
+
+.button {
+  font-size: 20px;
+  background-color: #59ff00;
+  border: 0;
+  border-radius: 13px;
+  padding: 5px 15px;
+  margin: 0 10px;
+}
+.button:hover {
+  scale: 1.05;
+  -webkit-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
+  -webkit-transition: scale 0.3s, -webkit-box-shadow 0.3s;
+  transition: scale 0.3s, -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s, scale 0.3s;
+  transition: box-shadow 0.3s, scale 0.3s, -webkit-box-shadow 0.3s;
+}
+.button__reset {
+  background-color: #ff0000;
+}
+
+.alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5764705882);
+}
+.alert p {
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: #fff;
+  padding: 10px 50px;
+  color: black;
+  font-size: 20px;
+  border-radius: 13px;
+}
+
+.sign {
+  position: relative;
+  width: 50px;
+  height: 25px;
+}
+.sign::after, .sign::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #59ff00;
+  border: 1px solid;
+}
+.sign::before {
+  right: 0;
+  background-color: #fff;
+  border-left: 0;
+}
+.sign:checked::after {
+  background-color: #fff;
+}
+.sign:checked::before {
+  background-color: #59ff00;
+}
+
+.hide {
+  display: none;
+}
+
+@media (orientation: portrait), screen and (max-width: 1366px) {
+  body {
+    height: 100%;
+  }
+  .wraper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+  }
+  .info {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 10px;
+  }
+  .result {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 10px;
+  }
+  .boxes {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .tableResults {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .buttons {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+}/*# sourceMappingURL=main.css.map */
