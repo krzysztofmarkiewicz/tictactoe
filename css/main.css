@@ -18,7 +18,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #f3f3f3;
+  color: #fff;
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
 .wraper {
@@ -40,7 +42,7 @@ body {
       flex-wrap: wrap;
   height: 400px;
   width: 800px;
-  background-color: #fff;
+  background-color: #407bb7;
   border: solid;
   border-radius: 50px;
 }
@@ -57,7 +59,7 @@ body {
   gap: 5px;
   width: 295px;
   height: 294px;
-  background-color: black;
+  background-color: #fff;
   margin: 15px;
 }
 
@@ -68,7 +70,7 @@ body {
   height: 95px;
   font-size: 75px;
   text-align: center;
-  background-color: #fff;
+  background-color: #407bb7;
 }
 
 .result {
@@ -80,7 +82,7 @@ body {
   max-width: 300px;
   text-align: center;
   font-size: 35px;
-  color: #ff0000;
+  color: #59ff00;
   margin: 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -262,9 +264,8 @@ body {
     height: 100%;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    background-color: #fff;
     border: none;
-    border-radius: 50px;
+    border-radius: 0;
   }
   .info {
     -webkit-box-ordinal-group: 2;

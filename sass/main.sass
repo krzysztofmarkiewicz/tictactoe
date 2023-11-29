@@ -3,6 +3,7 @@ $gapWidth: 5px
 $margin: 15px
 $colorRed: #ff0000
 $colorGreen: #59ff00
+$colorBlue: #407bb7
 $colorWhite: #fff
 
 *, *::before, *::after
@@ -16,7 +17,9 @@ body
     align-items: center
     justify-content: center
     background-color: #f3f3f3
+    color: $colorWhite
     font-family: "Montserrat", sans-serif
+    overflow: hidden
 
     
  
@@ -29,7 +32,7 @@ body
     flex-wrap: wrap
     height: 400px
     width: 800px
-    background-color: $colorWhite
+    background-color: $colorBlue
     border: solid
     border-radius: 50px
 .boxes
@@ -39,7 +42,7 @@ body
     gap: $gapWidth
     width: $widthApp - $gapWidth
     height: $widthApp - $gapWidth - 1px
-    background-color: black
+    background-color: $colorWhite
     margin: $margin
 .box
     flex-basis: 95px
@@ -47,7 +50,7 @@ body
     height: 95px
     font-size: 75px
     text-align: center
-    background-color: $colorWhite
+    background-color: $colorBlue
 
 .result
     order: 2
@@ -56,7 +59,7 @@ body
     max-width: $widthApp
     text-align: center
     font-size: 35px
-    color: $colorRed
+    color: $colorGreen
     margin: $margin
     white-space: nowrap
     overflow: hidden
@@ -183,9 +186,8 @@ body
         flex-direction: column
         height: 100%
         flex-wrap: nowrap
-        background-color: $colorWhite
         border: none
-        border-radius: 50px
+        border-radius: 0
     .info
         order: 1
         margin: 10px

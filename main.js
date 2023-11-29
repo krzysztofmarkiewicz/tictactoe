@@ -69,9 +69,6 @@ const checkNumOfGames = () => {
     }
 }
 
-
-
-
 const checkPlayersNames = () => {
     if (player1Name.value == '' || player2Name.value == '') {
         setStartGame()
@@ -157,6 +154,9 @@ const game = (e) => {
 
 
             }
+            // if(boxArr[1]===[5] && boxArr[1]===boxArr[9]){
+            //     winGame(el5, 1, 5, 9)
+            // }
             if (el5 == el1 && el5 == el9) {
                 winGame(el5, 1, 5, 9)
             } else if (el5 == el2 && el5 == el8) {
@@ -179,7 +179,7 @@ const game = (e) => {
                     completeTableResult('o')
                     checkNumOfGames()
                     state = 'end'
-                    // result.innerHTML=`REMIS`
+                    result.innerHTML=`REMIS`
                     numberClicks = 0
                 }
             }
@@ -209,10 +209,11 @@ boxes.forEach(box => {
 
 
 next.addEventListener('click', () => {
+    checkPlayersNames()
     if (state == 'end') {
         setStartGame()
     } else {
-        draw('Czy chcesz włączyć następną grę?', () => {})
+        // draw('Czy chcesz włączyć następną grę?', () => {})
     }
 
 })
