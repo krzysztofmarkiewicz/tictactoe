@@ -259,4 +259,8 @@ body {
 
 .hide {
   display: none;
+}
+
+[data-hardware=mobile] .wraper {
+  padding-bottom: 100px;
 }/*# sourceMappingURL=main.css.map */
