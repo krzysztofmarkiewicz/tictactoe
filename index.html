@@ -23,20 +23,20 @@
             </div>
             <div class="players">
                 <div class="player player--1" id="x">
-                    <input type="text" name="Wprowadź nazwę gracza x" class="playerNames" id="player1Name" value=""
-                       maxlength="8" placeholder="Podaj nazwę gracza 1" >
+                    <input type="text" name="Wprowadź nazwę gracza x" class="playerNames" id="player1Name" value="xx"
+                        maxlength="8" placeholder="Podaj nazwę gracza 1">
                 </div>
                 <input type="checkbox" class="player sign">
                 <div class="player player--2" id="o">
-                    <input type="text"  name="Wprowadź nazwę gracza x" class="playerNames" id="player2Name" value=""
-                    maxlength="8" placeholder="Podaj nazwę gracza 2">
+                    <input type="text" name="Wprowadź nazwę gracza x" class="playerNames" id="player2Name" value="yy"
+                        maxlength="8" placeholder="Podaj nazwę gracza 2">
                 </div>
             </div>
             <div class="players numOfGames">
                 <p>Wybierz ile gier</p>
-                <select name=""  id="">
+                <select name="" id="">
                     <option value="1" selected="selected">1</option>
-                    <option value="3" >3</option>
+                    <option value="3">3</option>
                     <option value="5">5</option>
                     <option value="7">7</option>
                 </select>
@@ -45,15 +45,18 @@
         <div class="result">Kółko i krzyżyk</div>
 
         <div class="boxes">
-            <div class="box" id="1"></div>
-            <div class="box" id="2"></div>
-            <div class="box" id="3"></div>
-            <div class="box" id="4"></div>
-            <div class="box" id="5"></div>
-            <div class="box" id="6"></div>
-            <div class="box" id="7"></div>
-            <div class="box" id="8"></div>
-            <div class="box" id="9"></div>
+            <div class="parent">
+                <div class="box id1" id="1"></div>
+                <div class="box id2" id="2"></div>
+                <div class="box id3" id="3"></div>
+                <div class="box id4" id="4"></div>
+                <div class="box id5" id="5"></div>
+                <div class="box id6" id="6"></div>
+                <div class="box id7" id="7"></div>
+                <div class="box id8" id="8"></div>
+                <div class="box id9" id="9"></div>
+            </div>
+
         </div>
 
         <table class="tableResults">
@@ -76,7 +79,7 @@
             <button class="button button__reset reset">Reset</button>
             <button class="button button__next next">Następna gra</button>
         </div>
-        
+
     </div>
     <div class="alert hide">
         <p class="alertMessage">

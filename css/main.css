@@ -1,25 +1,20 @@
 @charset "UTF-8";
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #f3f3f3;
   color: #fff;
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
 .wraper {
@@ -37,64 +32,56 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 400px;
-  width: 800px;
+  height: 100vh;
+  width: 100vw;
   background-color: #407bb7;
-  border: solid;
-  border-radius: 50px;
+}
+.wraper > div {
+  width: 100%;
 }
 
 .boxes {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 5px;
-  width: 295px;
-  height: 294px;
-  background-color: #fff;
-  margin: 15px;
+  position: relative;
+  background-color: red;
 }
 
 .box {
-  -ms-flex-preferred-size: 95px;
-      flex-basis: 95px;
-  width: 95px;
-  height: 95px;
-  font-size: 75px;
-  text-align: center;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  width: 100%;
+  height: 100%;
   background-color: #407bb7;
+  position: relative;
+  font-size: 126px;
+  text-align: center;
+}
+
+.parent {
+  display: grid;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 
 .result {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   position: relative;
-  height: 70px;
-  max-width: 300px;
   text-align: center;
   font-size: 35px;
   color: #59ff00;
-  margin: 15px;
   white-space: nowrap;
-  overflow: hidden;
 }
 .result p {
   font-size: 20px;
 }
 
 .info {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,7 +93,6 @@ body {
 
 .players {
   position: relative;
-  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,11 +100,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: 15px;
-  margin: 10px;
 }
 .players input {
   font-size: 10px;
@@ -136,6 +121,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: red;
 }
 
 .playerInfo::after {
@@ -155,23 +141,21 @@ body {
           justify-content: center;
 }
 .numOfGames > select {
-  margin: 0 10px;
   font-size: 15px;
 }
 
 .tableResults {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
   font-size: 15px;
   text-align: center;
 }
 
 .buttons {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .button {
@@ -246,50 +230,4 @@ body {
 
 .hide {
   display: none;
-}
-
-[data-hardware=mobile] body {
-  height: 100vh;
-}
-[data-hardware=mobile] .wraper {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  border: none;
-  border-radius: 0;
-  padding-bottom: 100px;
-}
-[data-hardware=mobile] .info {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  margin: 10px;
-}
-[data-hardware=mobile] .result {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  margin: 10px;
-}
-[data-hardware=mobile] .boxes {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-}
-[data-hardware=mobile] .tableResults {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-}
-[data-hardware=mobile] .buttons {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
 }/*# sourceMappingURL=main.css.map */

@@ -7,18 +7,17 @@ $colorBlue: #407bb7
 $colorWhite: #fff
 
 *, *::before, *::after
-    box-sizing: border-box
     margin: 0
     padding: 0
+    box-sizing: border-box
 
 body
     height: 100vh
+    width: 100vw
     display: flex
-    align-items: center
-    justify-content: center
-    background-color: #f3f3f3
     color: $colorWhite
     font-family: "Montserrat", sans-serif
+    overflow: hidden
 
     
  
@@ -28,57 +27,54 @@ body
     justify-content: center
     align-items: center
     flex-direction: column
-    flex-wrap: wrap
-    height: 400px
-    width: 800px
+    height: 100vh
+    width: 100vw
     background-color: $colorBlue
-    border: solid
-    border-radius: 50px
+    &>div
+        width: 100%
+
+
 .boxes
-    order: 5
-    display: flex
-    flex-wrap: wrap
-    gap: $gapWidth
-    width: $widthApp - $gapWidth
-    height: $widthApp - $gapWidth - 1px
-    background-color: $colorWhite
-    margin: $margin
+    position: relative
+    background-color: red
 .box
-    flex-basis: 95px
-    width: 95px
-    height: 95px
-    font-size: 75px
-    text-align: center
+    flex-grow: 3
+    width: 100%
+    height: 100%
     background-color: $colorBlue
+    position: relative
+    font-size: 126px
+    text-align: center
+.parent
+    // position: absolute
+    display: grid
+    background-color: $colorWhite
+    width: 100%
+    height: 100%
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    grid-column-gap: 5px
+    grid-row-gap: 5px
 
 .result
-    order: 2
+    flex-shrink: 1
     position: relative
-    height: 70px
-    max-width: $widthApp
     text-align: center
     font-size: 35px
     color: $colorGreen
-    margin: $margin
     white-space: nowrap
-    overflow: hidden
     p
         font-size: 20px
     
 .info
-    order: 1
-    width: $widthApp
     display: flex
     flex-direction: column
-    // margin: $margin
 .players
     position: relative
-    width: $widthApp
     display: flex
     flex-direction: row
-    justify-content: space-between
+    justify-content: space-evenly
     font-size: 15px
-    margin: 10px
     input
         font-size: 10px
         text-align: center
@@ -87,9 +83,9 @@ body
         font-weight: bold
 
 .player
-    // width: $widthApp/3
     display: flex
     justify-content: space-between
+    background-color: red
 .playerInfo
     &::after
         content: "Maksylanie 8 znaków"
@@ -106,17 +102,16 @@ body
 .numOfGames
     justify-content: center
     & > select
-        margin: 0 10px
         font-size: 15px
 
 .tableResults
-    order: 4
     font-size: 15px
     text-align: center
 
 .buttons
-    order: 3
-    margin: $margin
+   display: flex
+   justify-content: space-evenly
+
 .button
     font-size: 20px
     background-color: $colorGreen
@@ -153,7 +148,6 @@ body
     position: relative
     width: 50px
     height: 25px
-    // margin: 0 5px
     &::after, &::before
         content: ""
         position: absolute
@@ -161,7 +155,6 @@ body
         height: 100%
         background-color: $colorGreen
         border: 1px solid
-        // border-right: 0
     &::before
         right: 0
         background-color: $colorWhite
@@ -176,30 +169,6 @@ body
     display: none
 
 
-[data-hardware="mobile"]
-    body
-        height: 100vh
-    .wraper
-        justify-content: center
-        // align-items: start
-        flex-direction: column
-        height: 100%
-        flex-wrap: nowrap
-        border: none
-        border-radius: 0
-        padding-bottom: 100px
-
-    .info
-        order: 1
-        margin: 10px
-    .result
-        order: 2
-        margin: 10px
-    .boxes
-        order: 3
-    .tableResults
-        order: 4
-    .buttons
-        order: 5
+// [data-hardware="mobile"]
 
 

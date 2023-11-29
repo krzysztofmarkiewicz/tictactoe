@@ -1,3 +1,4 @@
+const boxesParent = document.querySelector('.boxes')
 const boxes = document.querySelectorAll('.box')
 const result = document.querySelector('.result')
 const player1Name = document.querySelector('#player1Name')
@@ -13,6 +14,36 @@ const reset = document.querySelector('.reset')
 const next = document.querySelector('.next')
 const numOfGames = document.querySelector('.numOfGames')
 const options = document.querySelectorAll('option')
+
+
+const setHeightWidth = () => {
+    const width = window.innerWidth
+    const height = window.innerHeight
+    if (width < height) {
+        boxesParent.style.flexGrow = '0'
+        boxesParent.style.width = '100%'
+        boxesParent.style.height = `${boxesParent.clientWidth}px`
+        if (boxesParent.clientWidth > boxesParent.clientHeight) {
+            boxesParent.style.width = `${boxesParent.clientHeight}px`
+        }
+        boxes.forEach(box => {
+            box.style.fontSize=`${(box.clientHeight)*.8}px`
+        })
+    } else if (width > height) {
+        boxesParent.style.flexGrow = '1'
+        boxesParent.style.width = `${boxesParent.clientHeight}px`
+        console.log(boxesParent.clientWidth + ' : ' + boxesParent.clientHeight + ' / ' + window.innerWidth + ' : ' + window.innerHeight);
+        boxes.forEach(box => {
+            box.style.fontSize=`${(box.clientHeight)*.8}px`
+        })
+    }
+    // boxes.forEach(box => {
+    //     box.style.fontSize=`${(box.clientHeight)*.8}px`
+    // })
+}
+setHeightWidth()
+window.addEventListener('resize', setHeightWidth)
+
 
 function detectMobile() {
     const toMatch = [
@@ -32,10 +63,6 @@ function detectMobile() {
 if (detectMobile()) {
     document.querySelector('html').setAttribute('data-hardware', 'mobile')
 }
-
-console.log(navigator.userAgentData.mobile);
-console.log(detectMobile());
-console.log(window.navigator);
 
 let state = ''
 let boxArr = []
@@ -163,13 +190,13 @@ const game = (e) => {
             const el7 = boxArr[7]
             const el8 = boxArr[8]
             const el9 = boxArr[9]
-
             const winGame = (nameBox1Wins, numBox1, numBox2, numBox3) => {
                 checkNumOfGames()
                 completeTableResult(nameBox1Wins)
                 printResult(nameBox1Wins)
                 state = 'end'
                 boxes.forEach(el => {
+                    console.log(el);
                     if (el.id == numBox1 || el.id == numBox2 || el.id == numBox3) {
                         el.style.color = 'red'
                     }
