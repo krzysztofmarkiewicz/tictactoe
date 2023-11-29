@@ -49,7 +49,7 @@ function detectMobile() {
     const toMatch = [
         // /Android/i,
         // /webOS/i,
-        /iPhone/i,
+        /Mobile Safari/i,
         // /iPad/i,
         // /iPod/i,
         // /BlackBerry/i,
