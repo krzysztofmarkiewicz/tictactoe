@@ -328,3 +328,8 @@ numOfGames.addEventListener('input', (e) => {
     numberGames = e.target.value
 })
 //----------------------------------------------------------------
+
+console.log(window.navigator.userAgent);
+const xxx= window.navigator.userAgent
+result.innerText=xxx
+result.style.fontSize="10px"
