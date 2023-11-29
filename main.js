@@ -14,6 +14,29 @@ const next = document.querySelector('.next')
 const numOfGames = document.querySelector('.numOfGames')
 const options = document.querySelectorAll('option')
 
+function detectMobile() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i,
+    ];
+
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
+if (detectMobile()) {
+    document.querySelector('html').setAttribute('data-hardware', 'mobile')
+}
+
+console.log(navigator.userAgentData.mobile);
+console.log(detectMobile());
+console.log(window.navigator);
+
 let state = ''
 let boxArr = []
 player1Result.innerHTML = 0
@@ -179,7 +202,7 @@ const game = (e) => {
                     completeTableResult('o')
                     checkNumOfGames()
                     state = 'end'
-                    result.innerHTML=`REMIS`
+                    result.innerHTML = `REMIS`
                     numberClicks = 0
                 }
             }

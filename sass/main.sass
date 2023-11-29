@@ -175,8 +175,8 @@ body
 .hide
     display: none
 
-@media (orientation: portrait), screen and (max-width: 1366px)
-    $widthApp: 100px
+
+[data-hardware="mobile"]
     body
         height: 100vh
     .wraper
@@ -187,6 +187,8 @@ body
         flex-wrap: nowrap
         border: none
         border-radius: 0
+        padding-bottom: 100px
+
     .info
         order: 1
         margin: 10px

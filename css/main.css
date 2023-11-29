@@ -248,49 +248,48 @@ body {
   display: none;
 }
 
-@media (orientation: portrait), screen and (max-width: 1366px) {
-  body {
-    height: 100vh;
-  }
-  .wraper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100%;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    border: none;
-    border-radius: 0;
-  }
-  .info {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin: 10px;
-  }
-  .result {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin: 10px;
-  }
-  .boxes {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  .tableResults {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-  }
-  .buttons {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-  }
+[data-hardware=mobile] body {
+  height: 100vh;
+}
+[data-hardware=mobile] .wraper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border: none;
+  border-radius: 0;
+  padding-bottom: 100px;
+}
+[data-hardware=mobile] .info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin: 10px;
+}
+[data-hardware=mobile] .result {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 10px;
+}
+[data-hardware=mobile] .boxes {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+[data-hardware=mobile] .tableResults {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+[data-hardware=mobile] .buttons {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
 }/*# sourceMappingURL=main.css.map */
