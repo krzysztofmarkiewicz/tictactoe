@@ -30,6 +30,8 @@ body {
   width: 100%;
   background-color: #407bb7;
   padding: 10px 20px;
+  padding: 100px 0;
+  padding-bottom: 100px;
 }
 .wraper > div {
   -webkit-box-pack: center;
@@ -200,7 +202,6 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 20px;
-  margin-bottom: 100px;
 }
 
 .button {
