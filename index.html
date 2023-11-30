@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -17,23 +17,23 @@
     <div class="wraper">
         <div class="info">
             <div class="players players__names">
-                <p>Gracz <span>x</span></p>
-                <p>Kto rozpoczyna</p>
-                <p>Gracz <span>o</span></p>
+                <p>Player <span>x</span></p>
+                <p>Starts</p>
+                <p>Player <span>o</span></p>
             </div>
             <div class="players">
                 <div class="player player--1" id="x">
-                    <input type="text" name="Wprowadź nazwę gracza x" class="playerNames" id="player1Name" value="xx"
-                        maxlength="8" placeholder="Podaj nazwę gracza 1">
+                    <input type="text" name="player1Name" class="playerNames" id="player1Name" value="x"
+                        maxlength="8" placeholder="Enter player name">
                 </div>
                 <input type="checkbox" class="player sign">
                 <div class="player player--2" id="o">
-                    <input type="text" name="Wprowadź nazwę gracza x" class="playerNames" id="player2Name" value="yy"
-                        maxlength="8" placeholder="Podaj nazwę gracza 2">
+                    <input type="text" name="Eplayer2Name" class="playerNames" id="player2Name" value="o"
+                        maxlength="8" placeholder="Enter player name">
                 </div>
             </div>
             <div class="players numOfGames">
-                <p>Wybierz ile gier: </p>
+                <p>Number of games: </p>
                 <select name="" id="">
                     <option value="1" selected="selected">1</option>
                     <option value="3">3</option>
@@ -63,21 +63,21 @@
             <tbody>
                 <tr>
                     <th></th>
-                    <th>Ilość wygranych</th>
+                    <th>Points</th>
                 </tr>
                 <tr>
-                    <td class="playerNamestable" id="player1NameTable">Gracz 1</td>
+                    <td class="playerNamestable" id="player1NameTable">Player 1</td>
                     <td id="player1Result"></td>
                 </tr>
                 <tr>
-                    <td class="playerNamestable" id="player2NameTable">Gracz 2</td>
+                    <td class="playerNamestable" id="player2NameTable">Player 2</td>
                     <td id="player2Result"></td>
                 </tr>
             </tbody>
         </table>
         <div class="buttons">
             <button class="button button__reset reset">Reset</button>
-            <button class="button button__next next">Następna gra</button>
+            <button class="button button__next next">Next game</button>
         </div>
 
     </div>

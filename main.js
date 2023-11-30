@@ -99,7 +99,7 @@ const setStartGame = () => {
         e.style.color = 'black'
     })
     changeSign.checked = false
-    result.innerHTML = '<p>Kółko i krzyżyk</p>'
+    result.innerHTML = '<p>Tic Tac Toe</p>'
 
 
 }
@@ -131,7 +131,7 @@ const checkNumOfGames = () => {
 const checkPlayersNames = () => {
     if (player1Name.value == '' || player2Name.value == '') {
         setStartGame()
-        alert.firstElementChild.innerHTML = 'Wprowadź nazwy graczy !'
+        alert.firstElementChild.innerHTML = 'Enter player names !'
         alert.classList.remove('hide')
         alert.addEventListener('click', () => {
             alert.classList.add('hide')
@@ -141,23 +141,23 @@ const checkPlayersNames = () => {
 const printResult = (e) => {
     if (numberGames == 0) {
         if (player1Result.innerHTML > player2Result.innerHTML) {
-            result.innerHTML = `${player1Name.value} WYGRYWA`
+            result.innerHTML = `${player1Name.value} won!`
         } else if (player1Result.innerHTML < player2Result.innerHTML) {
-            result.innerHTML = `${player2Name.value} WYGRYWA`
+            result.innerHTML = `${player2Name.value} won!`
         } else {
             result.innerHTML = `REMIS`
         }
 
     } else {
         if (e == 'x') {
-            result.innerHTML = `${player1Name.value} +1 punkt!`
+            result.innerHTML = `${player1Name.value} +1 point!`
         } else if (e == 'o') {
-            result.innerHTML = `${player2Name.value} +1 punkt!`
+            result.innerHTML = `${player2Name.value} +1 point!`
         } else {
 
         }
     }
-    result.innerHTML = `<p>${result.innerHTML}x</p>`
+    result.innerHTML = `<p>${result.innerHTML}</p>`
     // result.after(`Pozostało gier: ${numberGames}`)
 }
 
@@ -238,7 +238,7 @@ const game = (e) => {
                     completeTableResult('o')
                     checkNumOfGames()
                     state = 'end'
-                    result.innerHTML = `REMIS`
+                    result.innerHTML = `DRAW`
                     numberClicks = 0
                 }
             }
@@ -249,7 +249,7 @@ const game = (e) => {
 
 // set draw
 const draw = (info, drawFunc) => {
-    if (confirm(`${info} Jeśli tak, to gra zostanie uznana jako remis. Jedna gra przepadnie, a graczom doda po 1 punkcie`)) {
+    if (confirm(`${info} If you confirm, the game will be considered a draw. One game will be lost and 1 point will be added to the players`)) {
         setStartGame()
         completeTableResult('x')
         completeTableResult('o')
@@ -280,7 +280,7 @@ next.addEventListener('click', () => {
 
 
 reset.addEventListener('click', () => {
-    if (confirm('Czy na pewno chcesz zresetować całą grę i wyzerować wszystkie wyniki?')) {
+    if (confirm('Are you sure you want to reset the entire game and reset all scores?')) {
         location.reload()
     }
 
@@ -299,7 +299,7 @@ changeSign.addEventListener('click', (e) => {
     }
 
     if (gameStarts == 'yes') {
-        draw('Czy na pewno chcesz zmienić gracza?', freezeSignSwitcher)
+        draw('Are you sure you want to change player?', freezeSignSwitcher)
 
     } else {
         if (e.target.checked == true) {
