@@ -15,11 +15,9 @@ body
     position: relative
     height: 100dvh
     width: 100dvw
-    // display: flex
     color: $colorWhite
     font-family: "Montserrat", sans-serif
     background-color: $colorBlue
-
     overflow: hidden
 
     
@@ -31,12 +29,10 @@ body
     flex-direction: column
     height: 100%
     width: 100%
-    background-color: $colorBlue
-    padding: 10px 20px
-    padding: 10px 0
+    // padding: 10px 20px
     &>div
-        justify-content: center
-        width: 100%
+        // justify-content: center
+        // width: 100%
 
 .boxes
     position: relative
@@ -85,16 +81,11 @@ body
     position: relative
     display: flex
     flex-direction: column
-    margin: 10px 0
-    // justify-content: center
-    // align-content: center
     text-align: center
     color: $colorGreen
     &>p
         font-size: 35px
-        // background-color: red
         &+p
-            // background-color: blue
             font-size: 10px
 
 
@@ -102,13 +93,11 @@ body
 .info
     display: flex
     flex-direction: column
-    margin: 10px 0
 .players
     position: relative
     display: flex
     flex-direction: row
     justify-content: space-evenly
-    padding: 5px
     font-size: 15px
     input
         font-size: 10px
@@ -120,7 +109,7 @@ body
 .player
     display: flex
     justify-content: space-between
-    background-color: red
+    // background-color: red
 .playerInfo
     &::after
         content: "Maksylanie 8 znaków"
@@ -135,18 +124,27 @@ body
         
 
 .numOfGames
+    display: flex
+    align-items: center
     justify-content: center
+    font-size: 15px
+    color: white
     & > select
+        margin-left: 3px
+        color: white
+
+        background-color: transparent
         font-size: 15px
 
 .tableResults
+    display: block   
+    margin: 0 auto 
     font-size: 15px
     text-align: center
 
 .buttons
     display: flex
     justify-content: space-evenly
-    padding: 20px
 
 
 .button
@@ -154,7 +152,6 @@ body
     background-color: $colorGreen
     border: 0
     border-radius: 13px
-    padding: 5px 15px
     margin: 0 10px
     &:hover
         scale: 1.05
@@ -175,11 +172,9 @@ body
     p
         align-self: center
         background-color: #fff
-        padding: 10px 50px
         color: black
         font-size: 20px
         border-radius: 13px
-
 
 .sign
     position: relative
@@ -207,7 +202,4 @@ body
 
 
 [data-hardware="mobile"]
-    .wraper
-        // padding-bottom: 100px
-        // background-color: red
 

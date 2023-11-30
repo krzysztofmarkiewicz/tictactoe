@@ -29,17 +29,7 @@ body {
           flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: #407bb7;
-  padding: 10px 20px;
-  padding: 10px 0;
 }
-.wraper > div {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
 .boxes {
   position: relative;
   -ms-flex-item-align: center;
@@ -113,7 +103,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px 0;
   text-align: center;
   color: #59ff00;
 }
@@ -132,7 +121,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px 0;
 }
 
 .players {
@@ -147,7 +135,6 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 5px;
   font-size: 15px;
 }
 .players input {
@@ -166,7 +153,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: red;
 }
 
 .playerInfo::after {
@@ -181,15 +167,28 @@ body {
 }
 
 .numOfGames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 15px;
+  color: white;
 }
 .numOfGames > select {
+  margin-left: 3px;
+  color: white;
+  background-color: transparent;
   font-size: 15px;
 }
 
 .tableResults {
+  display: block;
+  margin: 0 auto;
   font-size: 15px;
   text-align: center;
 }
@@ -201,7 +200,6 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 20px;
 }
 
 .button {
@@ -209,7 +207,6 @@ body {
   background-color: #59ff00;
   border: 0;
   border-radius: 13px;
-  padding: 5px 15px;
   margin: 0 10px;
 }
 .button:hover {
@@ -243,7 +240,6 @@ body {
   -ms-flex-item-align: center;
       align-self: center;
   background-color: #fff;
-  padding: 10px 50px;
   color: black;
   font-size: 20px;
   border-radius: 13px;
