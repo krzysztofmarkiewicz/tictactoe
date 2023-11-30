@@ -12,7 +12,6 @@ body {
   width: 100vw;
   color: #fff;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
 }
 
 .wraper {
@@ -30,8 +29,7 @@ body {
   width: 100%;
   background-color: #407bb7;
   padding: 10px 20px;
-  padding: 100px 0;
-  padding-bottom: 100px;
+  padding: 200px 0;
 }
 .wraper > div {
   -webkit-box-pack: center;
