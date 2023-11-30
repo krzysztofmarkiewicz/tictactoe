@@ -15,8 +15,12 @@ const next = document.querySelector('.next')
 const numOfGames = document.querySelector('.numOfGames')
 const options = document.querySelectorAll('option')
 
-
+// window.addEventListener('load',(e)=>{
 const setHeightWidth = () => {
+    const xxx=boxesParent.clientHeight
+
+    boxesParent.style.width = `${xxx}px`
+
     const width = window.innerWidth
     const height = window.innerHeight
     if (width < height) {
@@ -26,34 +30,39 @@ const setHeightWidth = () => {
         if (boxesParent.clientWidth > boxesParent.clientHeight) {
             boxesParent.style.width = `${boxesParent.clientHeight}px`
         }
-        boxes.forEach(box => {
-            box.style.fontSize=`${(box.clientHeight)*.8}px`
-        })
+        // boxes.forEach(box => {
+        //     box.style.fontSize=`${(box.clientHeight)*.8}px`
+        // })
     } else if (width > height) {
-        boxesParent.style.flexGrow = '1'
+        // boxesParent.style.flexGrow = '1'
+        
         boxesParent.style.width = `${boxesParent.clientHeight}px`
-        console.log(boxesParent.clientWidth + ' : ' + boxesParent.clientHeight + ' / ' + window.innerWidth + ' : ' + window.innerHeight);
+        // boxesParent.style.height = `${xxx}px`
+        // console.log(boxesParent.clientWidth + ' : ' + boxesParent.clientHeight + ' / ' + window.innerWidth + ' : ' + window.innerHeight);
         boxes.forEach(box => {
-            box.style.fontSize=`${(box.clientHeight)*.8}px`
+            const xxx=box.clientHeight
+            const yyy= box.clientWidth
+        console.log(xxx+' : '+yyy)
+
+            // box.style.fontSize=`${(box.clientHeight)*.8}px`
         })
     }
-    // boxes.forEach(box => {
-    //     box.style.fontSize=`${(box.clientHeight)*.8}px`
-    // })
+    boxes.forEach(box => {
+        box.style.fontSize=`${(box.clientHeight)*.8}px`
+    })
 }
-setHeightWidth()
-window.addEventListener('resize', setHeightWidth)
+
 
 
 function detectMobile() {
     const toMatch = [
-        // /Android/i,
-        // /webOS/i,
-        /Mobile Safari/i,
-        // /iPad/i,
-        // /iPod/i,
-        // /BlackBerry/i,
-        // /Windows Phone/i,
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i,
     ];
 
     return toMatch.some((toMatchItem) => {
@@ -90,7 +99,7 @@ const setStartGame = () => {
         e.style.color = 'black'
     })
     changeSign.checked = false
-    result.innerHTML = 'Kółko i krzyżyk'
+    result.innerHTML = '<p>Kółko i krzyżyk</p>'
 
 
 }
@@ -148,7 +157,8 @@ const printResult = (e) => {
 
         }
     }
-    result.innerHTML = result.innerHTML + `<p>Pozostało gier: ${numberGames}</p>`
+    result.innerHTML = `<p>${result.innerHTML}x</p>`
+    // result.after(`Pozostało gier: ${numberGames}`)
 }
 
 
@@ -196,7 +206,6 @@ const game = (e) => {
                 printResult(nameBox1Wins)
                 state = 'end'
                 boxes.forEach(el => {
-                    console.log(el);
                     if (el.id == numBox1 || el.id == numBox2 || el.id == numBox3) {
                         el.style.color = 'red'
                     }
@@ -329,7 +338,7 @@ numOfGames.addEventListener('input', (e) => {
 })
 //----------------------------------------------------------------
 
-console.log(window.navigator.userAgent);
-const xxx= window.navigator.userAgent
-result.innerText=xxx
-result.style.fontSize="10px"
+// })
+
+setHeightWidth()
+window.addEventListener('resize', setHeightWidth)

@@ -7,6 +7,7 @@
 }
 
 body {
+  position: relative;
   height: 100vh;
   width: 100vw;
   color: #fff;
@@ -25,28 +26,32 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: #407bb7;
+  padding: 10px 20px;
 }
 .wraper > div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
 .boxes {
   position: relative;
-  background-color: red;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 0;
+  height: 100%;
 }
 
 .box {
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
   width: 100%;
   height: 100%;
   background-color: #407bb7;
   position: relative;
-  font-size: 126px;
+  font-size: 26px;
   text-align: center;
 }
 
@@ -98,16 +103,23 @@ body {
 }
 
 .result {
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 0;
   text-align: center;
-  font-size: 35px;
   color: #59ff00;
-  white-space: nowrap;
 }
-.result p {
-  font-size: 20px;
+.result > p {
+  font-size: 35px;
+}
+.result > p + p {
+  font-size: 10px;
 }
 
 .info {
@@ -118,6 +130,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 10px 0;
 }
 
 .players {
@@ -132,6 +145,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding: 5px;
   font-size: 15px;
 }
 .players input {
@@ -185,6 +199,8 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding: 20px;
+  margin-bottom: 100px;
 }
 
 .button {
@@ -259,9 +275,4 @@ body {
 
 .hide {
   display: none;
-}
-
-[data-hardware=mobile] .wraper {
-  padding-bottom: 100px;
-  background-color: red;
 }/*# sourceMappingURL=main.css.map */

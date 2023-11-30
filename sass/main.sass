@@ -12,6 +12,7 @@ $colorWhite: #fff
     box-sizing: border-box
 
 body
+    position: relative
     height: 100vh
     width: 100vw
     // display: flex
@@ -26,27 +27,29 @@ body
     display: flex
     justify-content: space-around
     flex-direction: column
-    height: 100vh
-    width: 100vw
+    height: 100%
+    width: 100%
     background-color: $colorBlue
-    // padding: 10px 20px
+    padding: 10px 20px
     &>div
+        justify-content: center
         width: 100%
-
 
 .boxes
     position: relative
-    background-color: red
+    align-self: center
+    width: 0
+    height: 100%
+    // flex-grow: 1
+
 .box
-    flex-grow: 3
     width: 100%
     height: 100%
     background-color: $colorBlue
     position: relative
-    font-size: 126px
+    font-size: 26px
     text-align: center
 .parent
-    // position: absolute
     display: grid
     background-color: $colorWhite
     width: 100%
@@ -76,25 +79,33 @@ body
     grid-area: 3 / 3 / 4 / 4
 
 .result
-    flex-shrink: 1
     position: relative
+    display: flex
+    flex-direction: column
+    margin: 10px 0
+    // justify-content: center
+    // align-content: center
     text-align: center
-    font-size: 35px
     color: $colorGreen
-    white-space: nowrap
-    p
-        font-size: 20px
+    &>p
+        font-size: 35px
+        // background-color: red
+        &+p
+            // background-color: blue
+            font-size: 10px
 
 
     
 .info
     display: flex
     flex-direction: column
+    margin: 10px 0
 .players
     position: relative
     display: flex
     flex-direction: row
     justify-content: space-evenly
+    padding: 5px
     font-size: 15px
     input
         font-size: 10px
@@ -130,8 +141,11 @@ body
     text-align: center
 
 .buttons
-   display: flex
-   justify-content: space-evenly
+    display: flex
+    justify-content: space-evenly
+    padding: 20px
+    margin-bottom: 100px
+
 
 .button
     font-size: 20px
@@ -192,6 +206,6 @@ body
 
 [data-hardware="mobile"]
     .wraper
-        padding-bottom: 100px
-        background-color: red
+        // padding-bottom: 100px
+        // background-color: red
 
