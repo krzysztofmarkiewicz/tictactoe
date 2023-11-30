@@ -13,6 +13,7 @@ body {
   color: #fff;
   font-family: "Montserrat", sans-serif;
   background-color: #407bb7;
+  overflow: hidden;
 }
 
 .wraper {
